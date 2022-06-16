@@ -1,0 +1,114 @@
+// 2. Import default variables and available mixins.
+@import "config"; // 1. Your custom variables and variable overwrites.
+
+body {
+  font-family: Ubuntu;
+}
+
+.container{
+    padding: 0.5rem;
+
+}
+
+.custom-navbar {
+  height: 100vh;
+  width: 6rem;
+  position: sticky;
+  overflow: hidden;
+  ul {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      align-items: center;
+      li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+
+    //   padding-top: 8rem;
+    //   padding-bottom: 8rem;
+      h4 {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        color: $grey;
+      }
+    }
+  }
+}
+
+.section-title{
+    color: $grey;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.coverpage {
+    img{
+        height: 100vh;
+        object-fit: cover;
+}
+}
+
+.statement{
+    @include card-text;
+    @include statement-card;
+    z-index:0;
+    position: relative;
+    height: 60vh;
+    &__text{
+        z-index:1;
+    }
+    &__image{
+        display: flex;
+        justify-content: flex-end;
+        object-fit: contain;
+        z-index:-1;
+        img{
+            display: flex;
+            max-width: 85%;
+
+        }
+    }
+    &__button{
+        display: flex;
+        justify-content: flex-end;
+
+    }
+}
+
+.chairman-color{
+    background: $bluecard-secondary;
+    h1, h2{
+        color: $bluecard-primary;
+      }
+      p{
+        color: $black;
+      }
+}
+
+.president-color{
+    background-color: $purplecard-secondary;
+    h1, h2{
+        color: $purplecard-primary;
+      }
+      p{
+        color: $black;
+      }
+}
+
+.glance{
+    background-color: $greencard-secondary;
+    height: 50vh;
+    position: relative;
+    @include card-text;
+    align-items: center;
+    text-align: center;
+    h1{
+        color: $greencard-primary;
+    }
+    h2{
+        color: $black;
+    }
+}

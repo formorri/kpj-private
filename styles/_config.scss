@@ -1,0 +1,95 @@
+$bluecard-primary: #519dd6;
+$bluecard-secondary: #e0e8f2;
+$purplecard-primary: #626daf;
+$purplecard-secondary: #dad9e8;
+$greencard-primary: #72bfb5;
+$greencard-secondary: #e7f2ee;
+$redcard-primary: #e36f77;
+$redcard-secondary: #fae2e2;
+$download-button: #1e398d;
+$grey: #696969;
+$black: #000000;
+$white: #ffffff;
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("./fonts/Ubuntu-Light.eot");
+  src: url("./fonts/Ubuntu-Light.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Ubuntu-Light.woff2") format("woff2"),
+    url("./fonts/Ubuntu-Light.woff") format("woff"),
+    url("./fonts/Ubuntu-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./fonts/Ubuntu-Bold.eot');
+  src: url('./fonts/Ubuntu-Bold.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Ubuntu-Bold.woff2') format('woff2'),
+      url('./fonts/Ubuntu-Bold.woff') format('woff'),
+      url('./fonts/Ubuntu-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./fonts/Ubuntu-Medium.eot');
+  src: url('./fonts/Ubuntu-Medium.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Ubuntu-Medium.woff2') format('woff2'),
+      url('./fonts/Ubuntu-Medium.woff') format('woff'),
+      url('./fonts/Ubuntu-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Ubuntu';
+  src: url('./fonts/Ubuntu-Regular.eot');
+  src: url('./fonts/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/Ubuntu-Regular.woff2') format('woff2'),
+      url('./fonts/Ubuntu-Regular.woff') format('woff'),
+      url('./fonts/Ubuntu-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@mixin card-text{
+  // extrabold header text
+  h1{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    z-index: 1;
+  }
+  // extrabold name text
+  h2{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+  }
+  //  regular full title text
+  p{
+    font-weight: normal;
+    font-size: 16 px;
+    line-height: 18px;
+  }
+}
+
+@mixin statement-card{
+  text-align: left;
+  padding: 2rem 0 2rem 2rem;
+  border-radius: 20px;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 35pxs;
+}
