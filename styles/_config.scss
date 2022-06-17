@@ -62,7 +62,7 @@ $white: #ffffff;
 @mixin card-text{
   // extrabold header text
   h1{
-    font-weight: 700;
+    font-weight: 800;
     font-size: 25px;
     line-height: 30px;
     z-index: 1;
@@ -76,13 +76,13 @@ $white: #ffffff;
   //  regular full title text
   p{
     font-weight: normal;
-    font-size: 16 px;
+    font-size: 14px;
     line-height: 18px;
+
   }
 }
 
 @mixin statement-card{
-  text-align: left;
   padding: 2rem 0 2rem 2rem;
   border-radius: 20px;
 }
