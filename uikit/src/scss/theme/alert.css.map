@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "alert.scss"
-    ],
-    "names": [],
-    "file": "alert.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"alert.css"}

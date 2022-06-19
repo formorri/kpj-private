@@ -7,11 +7,11 @@
  */
 /* 1 */
 .uk-svg,
-.uk-svg:not(.uk-preserve) [fill*='#']:not(.uk-preserve) {
+.uk-svg:not(.uk-preserve) [fill*="#"]:not(.uk-preserve) {
   fill: currentcolor;
 }
 
-.uk-svg:not(.uk-preserve) [stroke*='#']:not(.uk-preserve) {
+.uk-svg:not(.uk-preserve) [stroke*="#"]:not(.uk-preserve) {
   stroke: currentcolor;
 }
 
@@ -19,7 +19,5 @@
  * Fix Firefox blurry SVG rendering: https://bugzilla.mozilla.org/show_bug.cgi?id=1046835
  */
 .uk-svg {
-  -webkit-transform: translate(0, 0);
-          transform: translate(0, 0);
-}
-/*# sourceMappingURL=svg.css.map */
+  transform: translate(0, 0);
+}/*# sourceMappingURL=svg.css.map */

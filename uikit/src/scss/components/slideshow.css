@@ -31,8 +31,7 @@
   /* 4 */
   -webkit-touch-callout: none;
   /* 5 */
-  -ms-touch-action: pan-y;
-      touch-action: pan-y;
+  touch-action: pan-y;
 }
 
 /* Item
@@ -62,5 +61,4 @@
  */
 .uk-slideshow-items > :not(.uk-active) {
   display: none;
-}
-/*# sourceMappingURL=slideshow.css.map */
+}/*# sourceMappingURL=slideshow.css.map */

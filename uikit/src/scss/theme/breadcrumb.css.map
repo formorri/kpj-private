@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "breadcrumb.scss"
-    ],
-    "names": [],
-    "file": "breadcrumb.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"breadcrumb.css"}

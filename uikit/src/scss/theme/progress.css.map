@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "progress.scss"
-    ],
-    "names": [],
-    "file": "progress.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"progress.css"}

@@ -39,8 +39,7 @@
   /* 2 */
   position: relative;
   /* 3 */
-  -ms-touch-action: pan-y;
-      touch-action: pan-y;
+  touch-action: pan-y;
 }
 
 /*
@@ -48,8 +47,6 @@
  * 2. Prevent displaying the callout information on iOS.
  */
 .uk-slider-items:not(.uk-grid) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   /* 1 */
   margin: 0;
@@ -60,8 +57,7 @@
 }
 
 .uk-slider-items.uk-grid {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 /* Item
@@ -73,11 +69,8 @@
  */
 .uk-slider-items > * {
   /* 1 */
-  -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none;
+  flex: none;
   max-width: 100%;
   /* 3 */
   position: relative;
-}
-/*# sourceMappingURL=slider.css.map */
+}/*# sourceMappingURL=slider.css.map */

@@ -1,9 +1,1 @@
-{
-    "version": 3,
-    "mappings": "",
-    "sources": [
-        "leader.scss"
-    ],
-    "names": [],
-    "file": "leader.css"
-}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"leader.css"}
