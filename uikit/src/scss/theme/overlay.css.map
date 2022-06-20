@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"overlay.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "overlay.scss"
+    ],
+    "names": [],
+    "file": "overlay.css"
+}

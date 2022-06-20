@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"divider.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "divider.scss"
+    ],
+    "names": [],
+    "file": "divider.css"
+}

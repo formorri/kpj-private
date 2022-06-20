@@ -7,9 +7,12 @@
  * 3. Gutter
  */
 .uk-thumbnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   /* 1 */
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   /* 2 */
   margin: 0;
   padding: 0;
@@ -46,7 +49,10 @@
  */
 .uk-thumbnav-vertical {
   /* 1 */
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   /* 2 */
   margin-left: 0;
   margin-top: -15px;
@@ -56,4 +62,5 @@
 .uk-thumbnav-vertical > * {
   padding-left: 0;
   padding-top: 15px;
-}/*# sourceMappingURL=thumbnav.css.map */
+}
+/*# sourceMappingURL=thumbnav.css.map */

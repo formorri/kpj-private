@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"totop.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "totop.scss"
+    ],
+    "names": [],
+    "file": "totop.css"
+}

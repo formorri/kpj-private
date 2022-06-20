@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"lightbox.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "lightbox.scss"
+    ],
+    "names": [],
+    "file": "lightbox.css"
+}

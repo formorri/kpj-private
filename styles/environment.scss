@@ -1,0 +1,100 @@
+// 2. Import default variables and available mixins.
+@import "config"; // 1. Your custom variables and variable overwrites.
+
+body {
+    font-family: Ubuntu;
+    background-color: $greencard-secondary;
+}
+
+.global-internal-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+
+.custom-navbar {
+    @include global-navbar;
+}
+
+.person-container-large {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 2%;
+    max-width: 35%;
+    height: auto;
+}
+
+.title-container {
+    @include internal-text;
+    padding: 2rem;
+    .person-container-medium {
+        z-index: -1;
+        display: flex;
+        align-items: flex-end;
+    }
+    
+    &__subtitle {
+        padding-right: 4rem;
+    }
+
+    h1 {
+        color: $greencard-primary;
+        padding-bottom: 1rem;
+    }
+
+    h1 {
+        color: $greencard-primary;
+    }
+
+    h4 {
+        color: $black;
+        margin: 0;
+        padding-bottom: 0;
+    }
+
+}
+
+.text-container {
+    @include internal-wrapper;
+    @include internal-text;
+    padding-bottom: 8rem;
+    h2 {
+        color: $greencard-primary;
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    h5 {
+        color: $grey;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.info-cards-highlighted{
+    @include internal-card;
+    @include sustainability-highlights-text;
+    background-color: $greencard-primary;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5{
+        color: $white;
+        margin: 0.5rem;
+    }
+}
+.info-cards-none {
+    @include internal-card;
+    @include sustainability-highlights-text;
+    background-color: $greencard-secondary;
+    h1,
+    h2,
+    h3,
+    h4,
+    h5{
+        color: $greencard-primary;
+        margin: 0.5rem;
+    }
+}

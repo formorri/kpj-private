@@ -5,15 +5,21 @@ body {
   font-family: Ubuntu;
 }
 
-.container {
-  padding: 0.5rem;
+.global-internal-container{
+  margin: 0;
+  display: flex;
   height: 100vh;
   width: 100wh;
-  position: flex;
 }
 
+.content-container{
+  padding: 1rem;
+}
+
+
+
 .custom-navbar {
-@include global-navbar;
+  @include global-navbar;
 }
 
 .section-title {
@@ -23,7 +29,8 @@ body {
 }
 
 .coverpage {
-  z-index:0;
+  position: absolute;
+  align-items: center;
   img {
     object-fit: contain;
   }
@@ -36,22 +43,25 @@ body {
   z-index: 0;
   position: relative;
   padding: 2rem 0 2rem 2rem;
+
   &__text {
-    margin: 0 ;
+    margin: 0;
     z-index: 1;
-    height: 120%;
   }
+
   &__image {
     z-index: -1;
     position: absolute;
-    top:5%;
+    bottom: 0%;
     right: 0;
     border-radius: 20px;
+
     img {
       object-fit: contain;
-      max-width: 95%;
+
     }
   }
+
   &__button {
     position: absolute;
     bottom: 5%;
@@ -85,22 +95,106 @@ body {
   }
 }
 
-.row2-sizing{
-  max-height: 1rem;
-}
-
 .glance {
   @include card-text;
-  margin: 0 1rem 0 1rem;
-  background-color: $greencard-secondary;
   align-items: center;
   text-align: center;
+  padding: 3rem 0 3rem 0;
+  background-color: $greencard-secondary;
   border-radius: 20px;
-    h1 {
-      color: $greencard-primary;
-    }
-    h2 {
-      color: $black;
+
+  h1 {
+    color: $greencard-primary;
+    margin: 0;
   }
 
+  h2 {
+    color: $black;
+    margin: 1rem 0 0.5rem 0;
+  }
 }
+
+.collapse-card-grid{
+  .uk-accordion > :nth-child(n+2){
+      margin-top:0;
+  }
+}
+
+
+.accordion-layout {
+  @include card-text;
+  margin: 0;
+  border-radius: 20px;
+  padding: 0.5rem;
+  .uk-accordion-title::before {
+    // idk why but this height function makes the close open button disappear
+    height: 0;
+    background-image: none;
+  }
+  &__title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    h1 {
+      padding-top: 1rem;
+      padding-left: 1rem;
+    }
+  }
+}
+
+.accordion-content {
+  @include internal-text;
+  padding-left: 1rem;
+  h5 {
+    color: $grey;
+  }
+}
+
+.environment-highlight-colors {
+  background-color: $greencard-secondary;
+  h1 {
+    color: $greencard-primary;
+  }
+}
+
+.social-highlight-colors {
+  background-color: $redcard-secondary;
+  h1 {
+    color: $redcard-primary;
+  }
+}
+
+
+.economic-highlight-colors {
+  background-color: $bluecard-secondary;
+  h1 {
+    color: $bluecard-primary;
+  }
+}
+
+// .economic {
+//   @include card-text;
+//   background-color: $bluecard-secondary;
+//   border-radius: 20px;
+//   padding: 1rem;
+
+//   .uk-accordion-title::before {
+//     // idk why but this height function makes the close open button disappear
+//     height: 0;
+//     background-image: none;
+//   }
+
+//   &__title {
+//     display: flex;
+//     flex-wrap: nowrap;
+//     justify-content: space-between;
+
+//     h1 {
+//       color: $bluecard-primary;
+//       padding-top: 1rem;
+//       padding-left: 1rem;
+//     }
+
+//   }
+// }

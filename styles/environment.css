@@ -1,0 +1,273 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 35pxs;
+}
+
+body {
+  font-family: Ubuntu;
+  background-color: #e7f2ee;
+}
+
+.global-internal-container {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.custom-navbar {
+  background-color: #ffffff;
+  height: 100vh;
+  width: 6rem;
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem 0 3rem 0;
+  z-index: 3;
+}
+
+.custom-navbar ul {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.custom-navbar ul li {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.custom-navbar ul li h4 {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  color: #696969;
+}
+
+.person-container-large {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 2%;
+  max-width: 35%;
+  height: auto;
+}
+
+.title-container {
+  padding: 2rem;
+}
+
+.title-container h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.title-container h2 {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.title-container h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.title-container h4 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.title-container h5 {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.title-container .person-container-medium {
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.title-container__subtitle {
+  padding-right: 4rem;
+}
+
+.title-container h1 {
+  color: #72bfb5;
+  padding-bottom: 1rem;
+}
+
+.title-container h1 {
+  color: #72bfb5;
+}
+
+.title-container h4 {
+  color: #000000;
+  margin: 0;
+  padding-bottom: 0;
+}
+
+.text-container {
+  border-radius: 40px;
+  background-color: #ffffff;
+  z-index: 1;
+  padding: 4rem;
+  padding-bottom: 8rem;
+}
+
+.text-container h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.text-container h2 {
+  font-weight: 800;
+  font-size: 25px;
+  line-height: 25px;
+}
+
+.text-container h3 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.text-container h4 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.text-container h5 {
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.text-container h2 {
+  color: #72bfb5;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.text-container h5 {
+  color: #696969;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.info-cards-highlighted {
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #72bfb5;
+}
+
+.info-cards-highlighted h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.info-cards-highlighted h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-highlighted h3 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-highlighted h4 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-highlighted span {
+  font-size: 18px;
+}
+
+.info-cards-highlighted h1,
+.info-cards-highlighted h2,
+.info-cards-highlighted h3,
+.info-cards-highlighted h4,
+.info-cards-highlighted h5 {
+  color: #ffffff;
+  margin: 0.5rem;
+}
+
+.info-cards-none {
+  padding: 1rem;
+  border-radius: 20px;
+  background-color: #e7f2ee;
+}
+
+.info-cards-none h1 {
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.info-cards-none h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-none h3 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-none h4 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-none span {
+  font-size: 18px;
+}
+
+.info-cards-none h1,
+.info-cards-none h2,
+.info-cards-none h3,
+.info-cards-none h4,
+.info-cards-none h5 {
+  color: #72bfb5;
+  margin: 0.5rem;
+}
+/*# sourceMappingURL=environment.css.map */

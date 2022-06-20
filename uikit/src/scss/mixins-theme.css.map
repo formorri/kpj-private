@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"mixins-theme.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "mixins-theme.scss"
+    ],
+    "names": [],
+    "file": "mixins-theme.css"
+}

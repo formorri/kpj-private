@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"padding.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "padding.scss"
+    ],
+    "names": [],
+    "file": "padding.css"
+}

@@ -1,1 +1,9 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"notification.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "notification.scss"
+    ],
+    "names": [],
+    "file": "notification.css"
+}
