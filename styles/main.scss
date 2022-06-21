@@ -14,13 +14,54 @@ body {
 
 .content-container{
   padding: 1rem;
+  display: flex
 }
 
-
+.section-containers{
+  padding: 1rem;
+}
 
 .custom-navbar {
   @include global-navbar;
 }
+
+.custom-navbar-phone {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+
+  &__container {
+      width: 4rem;
+      height: 4rem;
+  }
+  .push-element50 {
+      img {
+          margin-top: -50px;
+      }
+  }
+  ul {
+      background-color: $white;
+      box-shadow: 10px 10px 15px #0B1638;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 6rem;
+
+      li {
+          padding: 0 2rem 0 2rem;
+          text-align: center;
+
+          h4 {
+              font-size: 14px;
+              font-weight: normal;
+              font-style: normal;
+              color: $grey;
+          }
+      }
+  }
+  }
 
 .section-title {
   color: $grey;
@@ -29,10 +70,10 @@ body {
 }
 
 .coverpage {
-  position: absolute;
-  align-items: center;
+  position: relative;
   img {
-    object-fit: contain;
+
+    object-fit: cover;
   }
 }
 
@@ -120,12 +161,23 @@ body {
   }
 }
 
+.accordion-animation{
+  z-index:3;
+  margin-bottom: -30px;
+}
+
 
 .accordion-layout {
   @include card-text;
-  margin: 0;
   border-radius: 20px;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem 2rem 0.5rem;
+  position: relative;
+
+  &__link{
+    position: absolute;
+    right: 10px;
+    top:20px;
+  }
   .uk-accordion-title::before {
     // idk why but this height function makes the close open button disappear
     height: 0;
@@ -173,28 +225,13 @@ body {
   }
 }
 
-// .economic {
-//   @include card-text;
-//   background-color: $bluecard-secondary;
-//   border-radius: 20px;
-//   padding: 1rem;
-
-//   .uk-accordion-title::before {
-//     // idk why but this height function makes the close open button disappear
-//     height: 0;
-//     background-image: none;
-//   }
-
-//   &__title {
-//     display: flex;
-//     flex-wrap: nowrap;
-//     justify-content: space-between;
-
-//     h1 {
-//       color: $bluecard-primary;
-//       padding-top: 1rem;
-//       padding-left: 1rem;
-//     }
-
-//   }
-// }
+.advertisement{
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  width: 100%;
+  height: auto;
+  img{
+    object-fit: contain;
+    width: auto;
+  }
+}

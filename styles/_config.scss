@@ -53,6 +53,44 @@ $white: #ffffff;
   }
 }
 
+@mixin global-navbar-phone {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+
+  &__container {
+      width: 4rem;
+      height: 4rem;
+  }
+  .push-element50 {
+      img {
+          margin-top: -50px;
+      }
+  }
+  ul {
+      background-color: $white;
+      box-shadow: 10px 10px 15px #0B1638;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 6rem;
+
+      li {
+          padding: 0 2rem 0 2rem;
+          text-align: center;
+
+          h4 {
+              font-size: 14px;
+              font-weight: normal;
+              font-style: normal;
+              color: $grey;
+          }
+      }
+  }
+}
+
 // mixins for main page 
 
 @mixin card-text {
@@ -122,16 +160,32 @@ $white: #ffffff;
     font-weight: normal;
     font-style: normal;
     font-size: 16px;
-    line-height: 18px;
+    line-height: 22px;
   }
 
 }
 
-@mixin sustainability-highlights-text {
+@mixin sustainability-highlights-header-text {
+   // heavy header text
+   h1 {
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 40px;
+  }
+
+  // heavy secondary header text
+  h2 {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+
+@mixin sustainability-highlights-whitebox-text {
     // bold highlighted text
     h1 {
       font-weight: 800;
-      font-size: 40px;
+      font-size: 35px;
       line-height: 40px;
     }
   
@@ -151,7 +205,7 @@ $white: #ffffff;
   
     // thin text
     h4 {
-      font-weight: 400;
+      font-weight: 200;
       font-size: 18px;
       line-height: 20px;
     }
@@ -165,7 +219,7 @@ $white: #ffffff;
   border-radius: 40px;
   background-color: $white;
   z-index: 1;
-  padding: 4rem;
+  padding: 2.5rem;
 }
 
 @mixin internal-card {

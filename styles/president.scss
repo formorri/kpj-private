@@ -19,48 +19,50 @@ body {
     @include global-navbar;
 }
 
+.custom-navbar-phone {
+    @include global-navbar-phone;
+    }
+    
+
 .person-container-large {
     z-index: 3;
     position: absolute;
     bottom: 0;
-    left: 14%;
-    max-width: 25%;
+    left: 10%;
+    max-width: 28%;
     height: auto;
 }
 
-
 .title-container {
     @include internal-text;
-    padding: 2rem 0 0 2rem;
-
-    .person-container-medium {
-        z-index: -1;
-        display: flex;
-        align-items: flex-end;
-        object-fit: contain;
-
-        img {
-            max-width: 20%;
-        }
-    }
-
+    position: relative;
     &__subtitle {
         padding-right: 4rem;
     }
 
+    .person-container-medium {
+        z-index: 2;
+        width: 20rem;
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+    }
+    
     h1 {
         color: $purplecard-primary;
-        padding-bottom: 3rem;
+        padding:1rem 0 5rem 2rem;
     }
 
-    h3 {
+    h3{
         color: $purplecard-primary;
+        margin: 0;
+        padding: 1rem 0 1rem 2rem;
     }
 
     h4 {
         color: $black;
         margin: 0;
-        padding-bottom: 0;
+        padding: 1rem 0 2rem 2rem;
     }
 
 }
@@ -84,7 +86,6 @@ body {
 .info-cards {
     @include internal-card;
     background-color: $purplecard-primary;
-
     h1,
     h2,
     h3,

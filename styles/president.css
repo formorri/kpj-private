@@ -64,17 +64,62 @@ body {
   color: #696969;
 }
 
+.custom-navbar-phone {
+  position: -webkit-sticky;
+  /* Safari */
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+}
+
+.custom-navbar-phone__container {
+  width: 4rem;
+  height: 4rem;
+}
+
+.custom-navbar-phone .push-element50 img {
+  margin-top: -50px;
+}
+
+.custom-navbar-phone ul {
+  background-color: #ffffff;
+  -webkit-box-shadow: 10px 10px 15px #0B1638;
+          box-shadow: 10px 10px 15px #0B1638;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 6rem;
+}
+
+.custom-navbar-phone ul li {
+  padding: 0 2rem 0 2rem;
+  text-align: center;
+}
+
+.custom-navbar-phone ul li h4 {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  color: #696969;
+}
+
 .person-container-large {
   z-index: 3;
   position: absolute;
   bottom: 0;
-  left: 14%;
-  max-width: 25%;
+  left: 10%;
+  max-width: 28%;
   height: auto;
 }
 
 .title-container {
-  padding: 2rem 0 0 2rem;
+  position: relative;
 }
 
 .title-container h1 {
@@ -105,49 +150,43 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
-  line-height: 18px;
-}
-
-.title-container .person-container-medium {
-  z-index: -1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
-.title-container .person-container-medium img {
-  max-width: 20%;
+  line-height: 22px;
 }
 
 .title-container__subtitle {
   padding-right: 4rem;
 }
 
+.title-container .person-container-medium {
+  z-index: 2;
+  width: 20rem;
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+}
+
 .title-container h1 {
   color: #626daf;
-  padding-bottom: 3rem;
+  padding: 1rem 0 5rem 2rem;
 }
 
 .title-container h3 {
   color: #626daf;
+  margin: 0;
+  padding: 1rem 0 1rem 2rem;
 }
 
 .title-container h4 {
   color: #000000;
   margin: 0;
-  padding-bottom: 0;
+  padding: 1rem 0 2rem 2rem;
 }
 
 .text-container {
   border-radius: 40px;
   background-color: #ffffff;
   z-index: 1;
-  padding: 4rem;
+  padding: 2.5rem;
   padding-bottom: 10rem;
 }
 
@@ -179,7 +218,7 @@ body {
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
-  line-height: 18px;
+  line-height: 22px;
 }
 
 .text-container h2 {

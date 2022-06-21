@@ -19,6 +19,11 @@ body {
     @include global-navbar;
 }
 
+.custom-navbar-phone {
+    @include global-navbar-phone;
+    }
+    
+
 .person-container-large {
     z-index: 3;
     position: absolute;
@@ -30,33 +35,34 @@ body {
 
 .title-container {
     @include internal-text;
-    padding: 2rem 0 0 2rem;
     position: relative;
-    .person-container-medium {
-        z-index: -1;
-        display: flex;
-        align-items: flex-end;
-        position: absolute;
-        bottom: 0;
-    }
-    
     &__subtitle {
         padding-right: 4rem;
     }
 
+    .person-container-medium {
+        z-index: 2;
+        width: 20rem;
+        position: absolute;
+        bottom: 0%;
+        right: 0%;
+    }
+    
     h1 {
         color: $bluecard-primary;
-        padding-bottom: 5rem;
+        padding:1rem 0 5rem 2rem;
     }
 
-    h1 {
+    h3{
         color: $bluecard-primary;
+        margin: 0;
+        padding: 1rem 0 1rem 2rem;
     }
 
     h4 {
         color: $black;
         margin: 0;
-        padding-bottom: 0;
+        padding: 1rem 0 2rem 2rem;
     }
 
 }

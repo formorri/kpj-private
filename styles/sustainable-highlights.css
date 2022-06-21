@@ -7,9 +7,6 @@
 
 body {
   font-family: Ubuntu;
-  background-color: #e0e8f2;
-  height: 100vh;
-  width: 100wh;
 }
 
 .global-internal-container {
@@ -18,6 +15,18 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.environment-background {
+  background-color: #e7f2ee;
+}
+
+.social-background {
+  background-color: #fae2e2;
+}
+
+.economic-background {
+  background-color: #e0e8f2;
 }
 
 .custom-navbar {
@@ -109,17 +118,8 @@ body {
   color: #696969;
 }
 
-.person-container-large {
-  z-index: 3;
-  position: absolute;
-  bottom: 0;
-  left: 2%;
-  max-width: 35%;
-  height: auto;
-}
-
 .title-container {
-  position: relative;
+  padding: 2.5rem 2.5rem;
 }
 
 .title-container h1 {
@@ -129,57 +129,50 @@ body {
 }
 
 .title-container h2 {
-  font-weight: 800;
-  font-size: 25px;
+  font-weight: normal;
+  font-size: 18px;
   line-height: 25px;
 }
 
-.title-container h3 {
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 20px;
-}
-
-.title-container h4 {
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 20px;
-}
-
-.title-container h5 {
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 22px;
-}
-
-.title-container__subtitle {
-  padding-right: 4rem;
-}
-
-.title-container .person-container-medium {
-  z-index: 2;
-  width: 20rem;
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-}
-
 .title-container h1 {
-  color: #519dd6;
-  padding: 1rem 0 5rem 2rem;
+  color: #72bfb5;
+  padding-bottom: 1rem;
 }
 
-.title-container h3 {
-  color: #519dd6;
+.title-container h2 {
   margin: 0;
-  padding: 1rem 0 1rem 2rem;
-}
-
-.title-container h4 {
+  padding: 1rem 0 0 0;
   color: #000000;
-  margin: 0;
-  padding: 1rem 0 2rem 2rem;
+}
+
+.title-container-environment-colors h1 {
+  color: #72bfb5;
+}
+
+.title-container-social-colors h1 {
+  color: #e36f77;
+}
+
+.title-container-economic-colors h1 {
+  color: #519dd6;
+}
+
+.responsive-image img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.responsive-image-environment {
+  height: 20rem;
+  width: 100%;
+}
+
+.responsive-image-environment img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: auto;
 }
 
 .text-container {
@@ -222,28 +215,125 @@ body {
 }
 
 .text-container h2 {
-  color: #519dd6;
   margin: 0.5rem 0 1rem 0;
 }
 
 .text-container h5 {
-  color: #696969;
   margin-top: 0;
   margin-bottom: 1rem;
 }
 
-.info-cards {
+.info-cards-layout {
   padding: 1rem;
   border-radius: 20px;
+  padding: 2rem;
+}
+
+.info-cards-layout h1 {
+  font-weight: 800;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.info-cards-layout h2 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-layout h3 {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-layout h4 {
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.info-cards-layout span {
+  font-size: 18px;
+}
+
+.info-cards-layout h1,
+.info-cards-layout h2,
+.info-cards-layout h3,
+.info-cards-layout h4,
+.info-cards-layout h5 {
+  margin: 0;
+}
+
+.environment-highlighted {
+  background-color: #72bfb5;
+}
+
+.environment-highlighted h1,
+.environment-highlighted h2,
+.environment-highlighted h3,
+.environment-highlighted h4,
+.environment-highlighted h5 {
+  color: #ffffff;
+}
+
+.environment-none {
+  background-color: #e7f2ee;
+}
+
+.environment-none h1,
+.environment-none h2,
+.environment-none h3,
+.environment-none h4,
+.environment-none h5 {
+  color: #72bfb5;
+}
+
+.social-highlighted {
+  background-color: #e36f77;
+}
+
+.social-highlighted h1,
+.social-highlighted h2,
+.social-highlighted h3,
+.social-highlighted h4,
+.social-highlighted h5 {
+  color: #ffffff;
+}
+
+.social-none {
+  background-color: #fae2e2;
+}
+
+.social-none h1,
+.social-none h2,
+.social-none h3,
+.social-none h4,
+.social-none h5 {
+  color: #e36f77;
+}
+
+.economic-highlighted {
   background-color: #519dd6;
 }
 
-.info-cards h1,
-.info-cards h2,
-.info-cards h3,
-.info-cards h4,
-.info-cards h5 {
+.economic-highlighted h1,
+.economic-highlighted h2,
+.economic-highlighted h3,
+.economic-highlighted h4,
+.economic-highlighted h5 {
   color: #ffffff;
-  margin: 0.5rem;
 }
-/*# sourceMappingURL=chairman.css.map */
+
+.economic-none {
+  background-color: #e0e8f2;
+}
+
+.economic-none h1,
+.economic-none h2,
+.economic-none h3,
+.economic-none h4,
+.economic-none h5 {
+  color: #519dd6;
+}
+/*# sourceMappingURL=sustainable-highlights.css.map */
