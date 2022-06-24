@@ -1,148 +1,49 @@
 // 2. Import default variables and available mixins.
 @import "config"; // 1. Your custom variables and variable overwrites.
+@import "media-query.scss";
 
 body {
   font-family: Ubuntu;
 }
 
-.global-internal-container{
+.global-internal-container {
   margin: 0;
   display: flex;
   height: 100vh;
-  width: 100wh;
-}
-
-.content-container{
-  padding: 1rem;
-  display: flex
-}
-
-.section-containers{
-  padding: 1rem;
 }
 
 .custom-navbar {
   @include global-navbar;
+      // different sticky to fix sticky issue
+  @include global-navbar-frontpage-sticky;
 }
 
+
 .custom-navbar-phone {
-  position: -webkit-sticky;
-  /* Safari */
-  position: sticky;
-  bottom: 0;
-  z-index: 3;
-
-  &__container {
-      width: 4rem;
-      height: 4rem;
-  }
-  .push-element50 {
-      img {
-          margin-top: -50px;
-      }
-  }
-  ul {
-      background-color: $white;
-      box-shadow: 10px 10px 15px #0B1638;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 6rem;
-
-      li {
-          padding: 0 2rem 0 2rem;
-          text-align: center;
-
-          h4 {
-              font-size: 14px;
-              font-weight: normal;
-              font-style: normal;
-              color: $grey;
-          }
-      }
-  }
-  }
-
-.section-title {
-  color: $grey;
-  font-size: 18px;
-  font-weight: 500;
+@include global-navbar-phone;
 }
 
 .coverpage {
   position: relative;
-  img {
+  height: 100vh;
 
+  video {
     object-fit: cover;
   }
 }
 
-.statement {
-  @include card-text;
-  @include statement-card;
-  text-align: left;
-  z-index: 0;
-  position: relative;
-  padding: 2rem 0 2rem 2rem;
-
-  &__text {
-    margin: 0;
-    z-index: 1;
-  }
-
-  &__image {
-    z-index: -1;
-    position: absolute;
-    bottom: 0%;
-    right: 0;
-    border-radius: 20px;
-
-    img {
-      object-fit: contain;
-
-    }
-  }
-
-  &__button {
-    position: absolute;
-    bottom: 5%;
-    right: 0%;
-  }
-}
-
-.chairman-color {
-  background: $bluecard-secondary;
-  div {
-    h1,
-    h2 {
-      color: $bluecard-primary;
-    }
-    p {
-      color: $black;
-    }
-  }
-}
-
-.president-color {
-  background-color: $purplecard-secondary;
-  div {
-    h1,
-    h2 {
-      color: $purplecard-primary;
-    }
-    p {
-      color: $black;
-    }
-  }
+.section-title {
+  color: $grey;
 }
 
 .glance {
-  @include card-text;
+  @include card-text-xl;
   align-items: center;
   text-align: center;
-  padding: 3rem 0 3rem 0;
+  padding: 8rem 0 8rem 0;
   background-color: $greencard-secondary;
   border-radius: 20px;
+
 
   h1 {
     color: $greencard-primary;
@@ -153,58 +54,66 @@ body {
     color: $black;
     margin: 1rem 0 0.5rem 0;
   }
-}
 
-.collapse-card-grid{
-  .uk-accordion > :nth-child(n+2){
-      margin-top:0;
+  h3 {
+    color: $greencard-primary;
+    margin: 0;
   }
 }
 
-.accordion-animation{
-  z-index:3;
-  margin-bottom: -30px;
-}
+.president-color {
+  background-color: $purplecard-secondary;
 
+  div {
 
-.accordion-layout {
-  @include card-text;
-  border-radius: 20px;
-  padding: 0.5rem 0.5rem 2rem 0.5rem;
-  position: relative;
+    h1,
+    h2 {
+      color: $purplecard-primary;
+    }
 
-  &__link{
-    position: absolute;
-    right: 10px;
-    top:20px;
-  }
-  .uk-accordion-title::before {
-    // idk why but this height function makes the close open button disappear
-    height: 0;
-    background-image: none;
-  }
-  &__title {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-
-    h1 {
-      padding-top: 1rem;
-      padding-left: 1rem;
+    p {
+      color: $black;
     }
   }
 }
 
-.accordion-content {
-  @include internal-text;
-  padding-left: 1rem;
-  h5 {
-    color: $grey;
+
+.chairman-color {
+  background: $bluecard-secondary;
+
+  div {
+
+    h1,
+    h2 {
+      color: $bluecard-primary;
+    }
+
+    p {
+      color: $black;
+    }
   }
 }
 
+.president-color {
+  background-color: $purplecard-secondary;
+
+  div {
+
+    h1,
+    h2 {
+      color: $purplecard-primary;
+    }
+
+    p {
+      color: $black;
+    }
+  }
+}
+
+
 .environment-highlight-colors {
   background-color: $greencard-secondary;
+
   h1 {
     color: $greencard-primary;
   }
@@ -212,26 +121,848 @@ body {
 
 .social-highlight-colors {
   background-color: $redcard-secondary;
+
   h1 {
     color: $redcard-primary;
   }
 }
 
-
 .economic-highlight-colors {
   background-color: $bluecard-secondary;
+
   h1 {
     color: $bluecard-primary;
   }
 }
 
-.advertisement{
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  width: 100%;
-  height: auto;
-  img{
-    object-fit: contain;
-    width: auto;
+
+
+.glance {
+  align-items: center;
+  text-align: center;
+  background-color: $greencard-secondary;
+  border-radius: 20px;
+
+  h1 {
+    color: $greencard-primary;
+  }
+
+  h2 {
+    color: $black;
+  }
+
+  h3 {
+    color: $greencard-primary;
+  }
+}
+
+
+
+// ! Responsive
+
+@include xl {
+  .content-container {
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-right: 7rem;
+  }
+
+  .section-title {
+    font-size: 30px;
+    font-weight: 500;
+  }
+
+
+  .statement {
+    @include statement-card;
+    @include card-text-xl;
+    text-align: left;
+    z-index: 0;
+    position: relative;
+    height: 30rem;
+    padding: 3rem;
+
+    &__text {
+      margin: 0;
+      z-index: 1;
+
+      h1 {
+        padding-bottom: 5rem;
+      }
+    }
+
+    &__image {
+      z-index: -1;
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      border-radius: 20px;
+      width: 80%;
+
+      img {
+        object-fit: contain;
+
+      }
+    }
+
+    &__button {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+
+      svg {
+        width: 4rem;
+        object-fit: contain;
+      }
+    }
+
+
+  }
+
+  .glance {
+    @include card-text-xl;
+    align-items: center;
+    text-align: center;
+    padding: 5rem 0 5rem 0;
+    background-color: $greencard-secondary;
+    border-radius: 20px;
+
+
+    h1 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+
+    h2 {
+      color: $black;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    h3 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+  }
+
+  .collapse-card-grid {
+    .uk-accordion> :nth-child(n+2) {
+      margin-top: 0;
+    }
+  }
+
+  .accordion-animation {
+    z-index: 3;
+    margin-bottom: -30px;
+
+    svg {
+      width: 4rem;
+    }
+  }
+
+  .sustainability-container {
+    height: 40vh;
+  }
+
+  .accordion-layout {
+    @include card-text-xl;
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    position: relative;
+
+    &__link {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+    }
+
+    .uk-accordion-title::before {
+      // idk why but this height function makes the close open button disappear
+      height: 0;
+      background-image: none;
+    }
+
+    &__title {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      h1 {
+        padding-top: 1rem;
+        padding-left: 2rem;
+      }
+    }
+  }
+
+  .accordion-content {
+    @include card-text-xl;
+    padding-left: 1rem;
+
+    h5 {
+      padding-top: 2rem;
+      padding-left: 1rem;
+      color: $grey;
+    }
+
+    &__image {
+      position: relative;
+      height: 15rem;
+      bottom: 0%;
+      right: 0%;
+
+      img {
+        position: absolute;
+        width: 80%;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .advertisement {
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+
+    h1 {
+      color: $download-button;
+    }
+
+    &__image {
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include lg {
+  .content-container {
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-right: 7rem;
+  }
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  .statement {
+    @include statement-card;
+    @include card-text-between;
+    text-align: left;
+    z-index: 0;
+    position: relative;
+    height: 20rem;
+
+    &__text {
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__image {
+      z-index: -1;
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      border-radius: 20px;
+
+      img {
+        object-fit: contain;
+
+      }
+    }
+
+    &__button {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+
+      svg {
+        object-fit: contain;
+        width: 3rem;
+      }
+    }
+
+
+  }
+
+  .glance {
+    @include card-text-between;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0 3rem 0;
+    background-color: $greencard-secondary;
+    border-radius: 20px;
+
+
+    h1 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+
+    h2 {
+      color: $black;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    h3 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+  }
+
+  .collapse-card-grid {
+    .uk-accordion> :nth-child(n+2) {
+      margin-top: 0;
+    }
+  }
+
+  .accordion-animation {
+    z-index: 3;
+    margin-bottom: -30px;
+  }
+
+
+  .accordion-layout {
+    @include card-text-between;
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    position: relative;
+
+    &__link {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+    }
+
+    .uk-accordion-title::before {
+      // idk why but this height function makes the close open button disappear
+      height: 0;
+      background-image: none;
+    }
+
+    &__title {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      h1 {
+        padding-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .sustainability-container {
+    height: 40vh;
+  }
+
+  .accordion-content {
+    @include internal-text;
+    padding-left: 1rem;
+
+    h5 {
+      color: $grey;
+    }
+  }
+
+  .advertisement {
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+
+    h1 {
+      color: $download-button;
+    }
+
+    &__image {
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include md {
+  .content-container {
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-right: 7rem;
+  }
+
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  .statement {
+    @include statement-card;
+    @include card-text-between;
+    text-align: left;
+    z-index: 0;
+    position: relative;
+    height: 20rem;
+
+    &__text {
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__image {
+      z-index: -1;
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      border-radius: 20px;
+
+      img {
+        object-fit: contain;
+
+      }
+    }
+
+    &__button {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+
+      svg {
+        object-fit: contain;
+        width: 3rem;
+      }
+    }
+
+
+  }
+
+  .glance {
+    @include card-text-between;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0 3rem 0;
+    background-color: $greencard-secondary;
+    border-radius: 20px;
+
+
+    h1 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+
+    h2 {
+      color: $black;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    h3 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+  }
+
+  .collapse-card-grid {
+    .uk-accordion> :nth-child(n+2) {
+      margin-top: 0;
+    }
+  }
+
+  .accordion-animation {
+    z-index: 3;
+    margin-bottom: -30px;
+  }
+
+
+  .accordion-layout {
+    @include card-text-between;
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    position: relative;
+
+    &__link {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+    }
+
+    .uk-accordion-title::before {
+      // idk why but this height function makes the close open button disappear
+      height: 0;
+      background-image: none;
+    }
+
+    &__title {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      h1 {
+        padding-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .sustainability-container {
+    height: 40vh;
+  }
+
+  .accordion-content {
+    @include internal-text;
+    padding-left: 1rem;
+
+    h5 {
+      color: $grey;
+    }
+  }
+
+  .advertisement {
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+
+    h1 {
+      color: $download-button;
+    }
+
+    &__image {
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include sm {
+  .content-container {
+    padding: 1rem;
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-right: 5rem;
+  }
+
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  .statement {
+    @include statement-card;
+    @include card-text-between;
+    text-align: left;
+    z-index: 0;
+    position: relative;
+    height: 20rem;
+
+    &__text {
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__image {
+      z-index: -1;
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      border-radius: 20px;
+
+      img {
+        object-fit: contain;
+
+      }
+    }
+
+    &__button {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+
+      svg {
+        width: 3rem;
+        object-fit: contain;
+      }
+    }
+
+
+  }
+
+  .glance {
+    @include card-text-between;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0 3rem 0;
+    background-color: $greencard-secondary;
+    border-radius: 20px;
+
+
+    h1 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+
+    h2 {
+      color: $black;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    h3 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+  }
+
+  .collapse-card-grid {
+    .uk-accordion> :nth-child(n+2) {
+      margin-top: 0;
+    }
+  }
+
+  .accordion-animation {
+    z-index: 3;
+    margin-bottom: -30px;
+  }
+
+
+  .accordion-layout {
+    @include card-text-between;
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    position: relative;
+
+    &__link {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+    }
+
+    .uk-accordion-title::before {
+      // idk why but this height function makes the close open button disappear
+      height: 0;
+      background-image: none;
+    }
+
+    &__title {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      h1 {
+        padding-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .sustainability-container {
+    height: 40vh;
+  }
+
+  .accordion-content {
+    @include internal-text;
+    padding-left: 1rem;
+
+    h5 {
+      color: $grey;
+    }
+
+    &__image {
+      position: relative;
+      height: 15rem;
+      bottom: 0%;
+      right: 0%;
+
+      img {
+        position: absolute;
+        width: 70%;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+
+  .advertisement {
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+
+    h1 {
+      color: $download-button;
+    }
+
+    &__image {
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include xs {
+  .content-container {
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+    margin-right: 5rem;
+  }
+
+
+  .section-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+
+  .statement {
+    @include statement-card;
+    @include card-text-xs;
+    text-align: left;
+    z-index: 0;
+    position: relative;
+    height: 20rem;
+
+    &__text {
+      margin: 0;
+      z-index: 1;
+    }
+
+    &__image {
+      z-index: -1;
+      position: absolute;
+      bottom: 0%;
+      right: 0%;
+      border-radius: 20px;
+
+      img {
+        object-fit: contain;
+
+      }
+    }
+
+    &__button {
+      position: absolute;
+      bottom: 2rem;
+      right: 2rem;
+
+      svg {
+        width: 3rem;
+        object-fit: contain;
+      }
+    }
+
+
+  }
+
+  .glance {
+    @include card-text-xs;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 0 3rem 0;
+    background-color: $greencard-secondary;
+    border-radius: 20px;
+
+
+    h1 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+
+    h2 {
+      color: $black;
+      margin: 1rem 0 0.5rem 0;
+    }
+
+    h3 {
+      color: $greencard-primary;
+      margin: 0;
+    }
+  }
+
+  .collapse-card-grid {
+    .uk-accordion> :nth-child(n+2) {
+      margin-top: 0;
+    }
+  }
+
+  .accordion-animation {
+    z-index: 3;
+    margin-bottom: -30px;
+  }
+
+
+  .accordion-layout {
+    @include card-text-xs;
+    border-radius: 20px;
+    padding: 0.5rem 0.5rem 2rem 0.5rem;
+    position: relative;
+
+    &__link {
+      position: absolute;
+      right: 10px;
+      top: 20px;
+    }
+
+    .uk-accordion-title::before {
+      // idk why but this height function makes the close open button disappear
+      height: 0;
+      background-image: none;
+    }
+
+    &__title {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+
+      h1 {
+        padding-top: 1rem;
+        padding-left: 1rem;
+      }
+    }
+  }
+
+  .sustainability-container {
+    height: 40vh;
+  }
+
+  .accordion-content {
+    @include internal-text;
+    padding-left: 1rem;
+
+    h5 {
+      color: $grey;
+    }
+  }
+
+  .advertisement {
+    margin-top: 3rem;
+    width: 100%;
+    height: auto;
+    padding-bottom: 10rem;
+
+    h1 {
+      color: $download-button;
+    }
+
+    &__image {
+      img {
+        object-fit: contain;
+        width: 100%;
+      }
+    }
   }
 }

@@ -1,62 +1,64 @@
 // 2. Import default variables and available mixins.
 @import "config"; // 1. Your custom variables and variable overwrites.
+@import "media-query.scss";
 
 body {
     font-family: Ubuntu;
     background-color: $bluecard-secondary;
-    height: 100vh;
-    width: 100wh;
 }
 
 .global-internal-container {
     margin: 0;
     padding: 0;
     display: flex;
+    position: relative;
 }
 
 
 .custom-navbar {
     @include global-navbar;
-}
+    @include global-navbar-inner-sticky;
+  }
 
 .custom-navbar-phone {
     @include global-navbar-phone;
-    }
-    
+}
 
 .person-container-large {
     z-index: 3;
     position: absolute;
     bottom: 0;
-    left: 2%;
-    max-width: 35%;
+    left: 10%;
+    max-width: 30%;
     height: auto;
 }
 
 .title-container {
     @include internal-text;
     position: relative;
+
     &__subtitle {
         padding-right: 4rem;
+        padding-top: 3rem;
     }
 
     .person-container-medium {
         z-index: 2;
-        width: 20rem;
+        width: 55%;
         position: absolute;
         bottom: 0%;
         right: 0%;
     }
-    
+
     h1 {
         color: $bluecard-primary;
-        padding:1rem 0 5rem 2rem;
+        padding: 1rem 0 5rem 2rem;
     }
 
-    h3{
+    h3 {
         color: $bluecard-primary;
         margin: 0;
-        padding: 1rem 0 1rem 2rem;
+        padding: 1rem 8rem 1rem 2rem;
     }
 
     h4 {
@@ -67,10 +69,41 @@ body {
 
 }
 
+@include xs {
+    .text-container {
+        @include internal-wrapper-small;
+    }
+
+}
+
+@include sm {
+    .text-container {
+        @include internal-wrapper-small;
+    }
+}
+
+@include md {
+    .text-container {
+        @include internal-wrapper-small;
+    }
+}
+
+@include lg {
+    .text-container {
+        @include internal-wrapper;
+    }
+}
+
+@include xl {
+    .text-container {
+        @include internal-wrapper;
+    }
+}
+
+
 .text-container {
-    @include internal-wrapper;
     @include internal-text;
-    padding-bottom: 8rem;
+
     h2 {
         color: $bluecard-primary;
         margin: 0.5rem 0 1rem 0;
@@ -83,9 +116,12 @@ body {
     }
 }
 
+
 .info-cards {
     @include internal-card;
+    @include internal-card-text;
     background-color: $bluecard-primary;
+
     h1,
     h2,
     h3,
@@ -94,4 +130,13 @@ body {
         color: $white;
         margin: 0.5rem;
     }
+}
+
+.download-button {
+    @include download-hover;
+}
+
+.close-button-medium {
+    display: flex;
+    justify-content: flex-end;
 }

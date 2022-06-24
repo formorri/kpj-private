@@ -1,5 +1,6 @@
 // 2. Import default variables and available mixins.
 @import "config"; // 1. Your custom variables and variable overwrites.
+@import "media-query.scss";
 
 body {
     font-family: Ubuntu;
@@ -25,7 +26,8 @@ body {
 
 .custom-navbar {
     @include global-navbar;
-}
+    @include global-navbar-inner-sticky;
+  }
 
 .custom-navbar-phone {
 @include global-navbar-phone;
@@ -35,6 +37,9 @@ body {
 .title-container {
     @include sustainability-highlights-header-text;
     padding: 2.5rem 2.5rem;
+
+    position: sticky;
+    top: 0;
 
     h1 {
         color: $greencard-primary;
@@ -85,10 +90,37 @@ body {
     }
 }
 
+
+@include xs{
+    .text-container {
+        @include internal-wrapper-small;
+    }
+    
+}
+@include sm{
+    .text-container {
+        @include internal-wrapper-small;
+    }
+}
+@include md{
+    .text-container {
+        @include internal-wrapper-small;
+    }
+}
+@include lg{
+    .text-container {
+        @include internal-wrapper;
+    }
+}
+@include xl{
+    .text-container {
+        @include internal-wrapper;
+    }
+}
+
+
 .text-container {
-    @include internal-wrapper;
     @include internal-text;
-    padding-bottom: 8rem;
 
     h2 {
         margin: 0.5rem 0 1rem 0;
@@ -102,7 +134,7 @@ body {
 
 .info-cards-layout {
     @include internal-card;
-    @include sustainability-highlights-whitebox-text;
+    @include internal-card-text;
     padding: 2rem;
 
     h1,
@@ -184,4 +216,13 @@ body {
     h5 {
         color: $bluecard-primary;
     }
+}
+
+.download-button{
+    @include download-hover;
+}
+
+.close-button-medium{
+    display: flex;
+    justify-content: flex-end;
 }
