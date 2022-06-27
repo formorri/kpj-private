@@ -399,4 +399,12 @@ body {
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
+
+.menu-hover .cls-1::after {
+  content: url("menu-item1.svg");
+}
+
+.menu-hover .cls-1:hover::after {
+  content: url("menu-item1.svg#hover");
+}
 /*# sourceMappingURL=chairman.css.map */
