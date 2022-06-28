@@ -432,9 +432,6 @@ body {
   .accordion-animation svg {
     width: 4rem;
   }
-  .sustainability-container {
-    height: 40vh;
-  }
   .accordion-layout {
     border-radius: 20px;
     padding: 0.5rem 0.5rem 2rem 0.5rem;
@@ -711,9 +708,6 @@ body {
     padding-top: 1rem;
     padding-left: 1rem;
   }
-  .sustainability-container {
-    height: 40vh;
-  }
   .accordion-content {
     padding-left: 1rem;
   }
@@ -924,9 +918,6 @@ body {
     padding-top: 1rem;
     padding-left: 1rem;
   }
-  .sustainability-container {
-    height: 40vh;
-  }
   .accordion-content {
     padding-left: 1rem;
   }
@@ -1085,6 +1076,9 @@ body {
   .collapse-card-grid .uk-accordion > :nth-child(n+2) {
     margin-top: 0;
   }
+  .sustainability-highlights {
+    margin-bottom: 10rem;
+  }
   .accordion-animation {
     z-index: 3;
     margin-bottom: -30px;
@@ -1136,9 +1130,6 @@ body {
   .accordion-layout__title h1 {
     padding-top: 1rem;
     padding-left: 1rem;
-  }
-  .sustainability-container {
-    height: 40vh;
   }
   .accordion-content {
     padding-left: 1rem;
@@ -1307,6 +1298,9 @@ body {
   .collapse-card-grid .uk-accordion > :nth-child(n+2) {
     margin-top: 0;
   }
+  .sustainability-highlights {
+    margin-bottom: 10rem;
+  }
   .accordion-animation {
     z-index: 3;
     margin-bottom: -30px;
@@ -1359,9 +1353,6 @@ body {
     padding-top: 1rem;
     padding-left: 1rem;
   }
-  .sustainability-container {
-    height: 40vh;
-  }
   .accordion-content {
     padding-left: 1rem;
   }
@@ -1408,5 +1399,9 @@ body {
        object-fit: contain;
     width: 100%;
   }
+}
+
+.row-1 {
+  margin-bottom: 3rem;
 }
 /*# sourceMappingURL=main.css.map */
