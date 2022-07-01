@@ -1,0 +1,228 @@
+// 2. Import default variables and available mixins.
+@import "config"; // 1. Your custom variables and variable overwrites.
+@import "media-query.scss";
+
+body {
+    font-family: Ubuntu;
+}
+
+.global-internal-container {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.environment-background {
+    background-color: $greencard-secondary;
+}
+
+.social-background {
+    background-color: $redcard-secondary;
+}
+
+.economic-background {
+    background-color: $bluecard-secondary;
+}
+
+.custom-navbar {
+    @include global-navbar;
+    @include global-navbar-inner-sticky;
+  }
+
+.custom-navbar-phone {
+@include global-navbar-phone;
+}
+
+
+.title-container {
+    @include sustainability-highlights-header-text;
+    padding: 2.5rem 2.5rem;
+
+    position: sticky;
+    top: 0;
+
+    h1 {
+        color: $greencard-primary;
+        padding-bottom: 1rem;
+    }
+
+    h2 {
+        margin: 0;
+        padding: 1rem 0 0 0;
+        color: $black;
+    }
+
+}
+
+.title-container-environment-colors {
+    h1 {
+        color: $greencard-primary;
+    }
+}
+
+.title-container-social-colors {
+    h1 {
+        color: $redcard-primary;
+    }
+}
+
+.title-container-economic-colors {
+    h1 {
+        color: $bluecard-primary;
+    }
+}
+
+.responsive-image {
+    img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+}
+
+.responsive-image-environment {
+    height: 20rem;
+    width: 100%;
+
+    img {
+        object-fit: cover;
+        width: auto;
+    }
+}
+
+
+@include xs{
+    .text-container {
+        @include internal-wrapper-small;
+    }
+    
+}
+@include sm{
+    .text-container {
+        @include internal-wrapper-small;
+    }
+}
+@include md{
+    .text-container {
+        @include internal-wrapper-small;
+    }
+}
+@include lg{
+    .text-container {
+        @include internal-wrapper;
+    }
+}
+@include xl{
+    .text-container {
+        @include internal-wrapper;
+    }
+}
+
+
+.text-container {
+    @include internal-text;
+
+    h2 {
+        margin: 0.5rem 0 1rem 0;
+    }
+
+    h5 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+}
+
+.info-cards-layout {
+    @include internal-card;
+    @include internal-card-text;
+    padding: 2rem;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 0;
+    }
+}
+
+.environment-highlighted {
+    background-color: $greencard-primary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $white;
+    }
+}
+
+.environment-none {
+    background-color: $greencard-secondary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $greencard-primary;
+    }
+}
+
+.social-highlighted {
+    background-color: $redcard-primary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $white;
+    }
+}
+
+.social-none {
+    background-color: $redcard-secondary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $redcard-primary;
+    }
+}
+
+.economic-highlighted {
+    background-color: $bluecard-primary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $white;
+    }
+}
+
+.economic-none {
+    background-color: $bluecard-secondary;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        color: $bluecard-primary;
+    }
+}
+
+.download-button{
+    @include download-hover;
+}
+
+.close-button-medium{
+    display: flex;
+    justify-content: flex-end;
+}
